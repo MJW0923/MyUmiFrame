@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'dva';
 import styles from './style.less';
 import JwLoading from '@/components/JwLoading';
 import { Link } from 'umi';
 
-interface IProps {}
+interface IProps {
+  dispatch: Function;
+  ListNsp: {
+    isFetching: boolean;
+    fetchingTxt: string;
+    count: number;
+  };
+}
 interface IState {}
 
 class List extends Component<IProps, IState> {
@@ -13,8 +21,9 @@ class List extends Component<IProps, IState> {
   }
 
   render() {
-    const { match } = this.props;
-    console.log('match ==', match);
+    const {} = this.props;
+    console.log('this.props===', this.props);
+
     return (
       <div className={styles.listmain}>
         test是听说
@@ -24,4 +33,10 @@ class List extends Component<IProps, IState> {
     );
   }
 }
-export default List;
+
+function mapStateToProps(state: any) {
+  return {
+    ListNsp: state.ListNsp,
+  };
+}
+export default connect(mapStateToProps)(List);
