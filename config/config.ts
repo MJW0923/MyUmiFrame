@@ -1,3 +1,10 @@
+/*
+ * @Author: Jwma
+ * @Date: 2021-08-18 10:40:38
+ * @LastEditors: Jwma
+ * @LastEditTime: 2021-08-18 11:08:25
+ * @FilePath: \MyUmiFrame\config\config.ts
+ */
 import { IConfig, defineConfig } from 'umi';
 import routes from './routes';
 
@@ -8,10 +15,10 @@ const config: IConfig = {
   },
   hash: true,
   base: '/demo/',
-  // publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
   routes: routes,
   ignoreMomentLocale: true,
-  antd: {},
+  // antd: {},
   dva: {
     hmr: true,
   },

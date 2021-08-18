@@ -1,26 +1,15 @@
+/*
+ * @Author: Jwma
+ * @Date: 2021-08-18 10:40:38
+ * @LastEditors: Jwma
+ * @LastEditTime: 2021-08-18 10:54:54
+ * @FilePath: \MyUmiFrame\config\routes.ts
+ */
 export default [
-  // {
-  //   exact: true, //严格匹配
-  //   path: '/',
-  //   component: '../pages/Home',
-  //   title: 'home',
-  // },
   {
     exact: true, //严格匹配
-    path: '/home',
-    component: '@/pages/Home',
-    title: 'home',
-  },
-  {
-    exact: true, //严格匹配
-    path: '/list',
-    component: '@/pages/List',
-    title: 'list',
-  },
-  {
-    exact: true, //严格匹配
-    path: '/users/:name',
-    component: '@/pages/users/$name.tsx',
-    title: 'users',
+    path: '/main',
+    component: '@/pages/Main',
+    title: 'main',
   },
 ];
